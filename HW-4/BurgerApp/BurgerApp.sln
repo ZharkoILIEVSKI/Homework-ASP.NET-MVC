@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp", "BurgerApp\Burg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp.Domain", "BurgerApp.Domain\BurgerApp.Domain.csproj", "{CC7A0DAA-DB5F-4978-AEDF-52113860275A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerApp.ViewModels", "BurgerApp.ViewModels\BurgerApp.ViewModels.csproj", "{59279100-2A3A-41E4-9CCD-BB2C638A4CC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp.ViewModels", "BurgerApp.ViewModels\BurgerApp.ViewModels.csproj", "{59279100-2A3A-41E4-9CCD-BB2C638A4CC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerApp.DataAccess", "BurgerApp.DataAccess\BurgerApp.DataAccess.csproj", "{1695BC44-AFEC-42AA-9091-94E123BB87BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp.DataAccess", "BurgerApp.DataAccess\BurgerApp.DataAccess.csproj", "{1695BC44-AFEC-42AA-9091-94E123BB87BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerApp.Mappers", "BurgerApp.Mappers\BurgerApp.Mappers.csproj", "{F80550DE-0B09-4881-B753-237658791F2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerApp.Mappers", "BurgerApp.Mappers\BurgerApp.Mappers.csproj", "{F80550DE-0B09-4881-B753-237658791F2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerApp.Services", "BurgerApp.Services\BurgerApp.Services.csproj", "{F34AC372-83D5-4EC1-BD0F-765901D9C8D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F80550DE-0B09-4881-B753-237658791F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F80550DE-0B09-4881-B753-237658791F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F80550DE-0B09-4881-B753-237658791F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34AC372-83D5-4EC1-BD0F-765901D9C8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34AC372-83D5-4EC1-BD0F-765901D9C8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34AC372-83D5-4EC1-BD0F-765901D9C8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34AC372-83D5-4EC1-BD0F-765901D9C8D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

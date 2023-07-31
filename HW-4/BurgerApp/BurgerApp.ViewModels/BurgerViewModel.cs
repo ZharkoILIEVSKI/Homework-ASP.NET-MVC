@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BurgerApp.ViewModels
+namespace BurgerApp.Mappers.Extensions
 {
-    internal class BurgerViewModel
+    public class BurgerViewModel
     {
         public int Id { get; set; }
         public string BurgerName { get; set; }

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace BurgerApp.ViewModels
 {
-    internal class OrderViewModel
+    public class OrderViewModel
     {
-        public string Id { get; set; }
+        public int Id {get; set; }
         public string FullName { get; set; }   
         public bool IsDelivered { get; set; }
+        public string Location{ get; set; }
         public int UserId { get; set; }
     }
 }
