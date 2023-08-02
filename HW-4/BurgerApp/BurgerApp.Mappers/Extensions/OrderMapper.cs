@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,5 +32,27 @@ namespace BurgerApp.Mappers.Extensions
             };
         }
 
-    }
+        public static Order MapToOrder(this OrderViewModel orderViewModel ) 
+        {
+            return new Order
+            {
+                Id = orderViewModel.Id,
+                FullName = orderViewModel.FullName,
+                IsDelivered = orderViewModel.IsDelivered,
+                OrderLocation = orderViewModel.Location,
+                BurgerOrders = new List<BurgerOrder>(),
+            };
+        }
+
+        public static OrderListViewModel MapToOrderListViewModel(this Order order)
+        {
+            return new OrderListViewModel
+            {
+                Id = order.Id,
+                Delivered = order.IsDelivered,
+                UserFullName = $"{order.FullName.FullName}",
+                BurgerNames = order.BurgerOrders.Select(po => po.Burger.Name).ToList()
+            };
+        }
+}
 }

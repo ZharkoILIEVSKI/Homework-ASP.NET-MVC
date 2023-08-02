@@ -25,7 +25,8 @@ namespace BurgerApp.Services
 
         public List<BurgerViewModel> GetBurgersFromDropDown()
         {
-            List<Burger> burgerDb = ;
+            List<Burger> burgerDb = _burgerRepository.GetAll();
+            return burgerDb.Select(x => x.MapToBurgerViewModel()).ToList();
         }
     }
 }

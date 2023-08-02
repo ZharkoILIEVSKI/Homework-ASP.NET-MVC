@@ -10,4 +10,13 @@
     <ProjectReference Include="..\BurgerApp.Domain\BurgerApp.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Repositories\Implementation\EntityFrameworkImplementation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+  </ItemGroup>
+
 </Project>

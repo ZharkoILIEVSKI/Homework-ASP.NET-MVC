@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BurgerApp.Domain.Models
 {
-    public class User
+    public class User : BaseEntity
     {
         public int Id { get; set; }
         public string FullName { get; set; }    

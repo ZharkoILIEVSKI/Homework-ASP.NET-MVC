@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BurgerApp.DataAccess
+namespace BurgerApp.DataAccess.Data
 {
     public class StaticDb
     {
@@ -62,7 +62,7 @@ namespace BurgerApp.DataAccess
                     FullName = "Bojan Bojanovski",
                     Address = "Praska 22",
                     IsDelivered = false,
-                    BurgerOrder = new List<BurgerOrder>
+                    BurgerOrders = new List<BurgerOrder>
                     {
                         new BurgerOrder
                         {
@@ -79,7 +79,7 @@ namespace BurgerApp.DataAccess
                     FullName = "Svetle Svetlanosvka",
                     Address = "Alzirska 33",
                     IsDelivered = false,
-                    BurgerOrder= new List<BurgerOrder> 
+                    BurgerOrders= new List<BurgerOrder>
                     {
                         new BurgerOrder
                         {
@@ -109,10 +109,10 @@ namespace BurgerApp.DataAccess
                     Orders = new List<Order> {}
                 }
             };
-            
+
         }
 
-        
+
 
 
     }

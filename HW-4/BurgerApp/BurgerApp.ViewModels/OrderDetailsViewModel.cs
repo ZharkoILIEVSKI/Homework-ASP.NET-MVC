@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BurgerApp.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace BurgerApp.ViewModels
     public class OrderDetailsViewModel
     {
         public int Id { get; set; }
-        public string FullName { get; set; }
+        public User FullName { get; set; }
         public bool IsDelivered { get; set; }
 
         public string Location { get; set; }
