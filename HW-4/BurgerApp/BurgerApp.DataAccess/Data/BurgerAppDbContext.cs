@@ -19,6 +19,12 @@ namespace BurgerApp.DataAccess.Data
 
         public DbSet<Burger> Burgers { get; set; }
 
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+
+        //    optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BurgerApp;Trusted_Connection=True;MultipleActiveResultSets=true");
+        //}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -76,18 +82,9 @@ namespace BurgerApp.DataAccess.Data
                             new Order
                             {
                                 Id = 1,
-                                User = "Bojan Bojanovski",
+                                FullName = "Bojan Bojanovski",
                                 Address = "Praska 22",
                                 IsDelivered = false,
-                                BurgerOrders = new List<BurgerOrder>
-                                {
-                                    new BurgerOrder
-                                    {
-                                        Burger = Burgers[0],
-                                        BurgerId = Burgers[0].Id,
-                                        OrderId = Orders[0].Id,
-                                    },
-                                },
                                 OrderLocation = "BurgerStore N'1",
                             },
                             new Order
@@ -96,15 +93,6 @@ namespace BurgerApp.DataAccess.Data
                                 FullName = "Svetle Svetlanosvka",
                                 Address = "Alzirska 33",
                                 IsDelivered = false,
-                                BurgerOrders = new List<BurgerOrder>
-                                {
-                                    new BurgerOrder
-                                    {
-                                        Burger = Burgers[1],
-                                        BurgerId = Burgers[1].Id,
-                                        OrderId = Orders[1].Id
-                                    },
-                                },
                                 OrderLocation = "BurgerStore N'2",
                             }
                 );

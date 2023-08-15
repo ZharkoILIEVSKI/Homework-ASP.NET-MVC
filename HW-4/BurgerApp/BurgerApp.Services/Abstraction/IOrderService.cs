@@ -9,7 +9,7 @@ namespace BurgerApp.Services.Abstraction
 {
     public interface IOrderService
     {
-        List<OrderListViewModel> GetAll(int orderId); 
+        List<OrderListViewModel> GetAll(); 
         OrderDetailsViewModel GetOrderDetails(int orderId);
         void CreateOrder(OrderViewModel orderViewModel);
         void DeleteOrder(int orderId);

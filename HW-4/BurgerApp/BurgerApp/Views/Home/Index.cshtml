@@ -2,7 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@using BurgerApp.ViewModels;
+
+@model BurgerOrderViewModel;
+
+
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to BurgerAPP</h1>
+    <h3>Today on sale: @Model.burger</h3>
 </div>

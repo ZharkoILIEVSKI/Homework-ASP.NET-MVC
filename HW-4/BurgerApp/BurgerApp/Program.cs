@@ -1,7 +1,19 @@
+using BurgerApp.Helpers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Registering Dependency Injection without a helper
+//builder.Services.AddTransient<IOrderService, OrderService>();
+//builder.Services.AddTransient<IRepository<Order>, OrderRepository>();
+
+var connectionString = builder.Configuration.GetConnectionString("BurgerAppCS");
+
+builder.Services.InjectServices();
+builder.Services.InjectRepositories();
+builder.Services.InjectDbContext(connectionString);
 
 var app = builder.Build();
 
@@ -14,6 +26,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();

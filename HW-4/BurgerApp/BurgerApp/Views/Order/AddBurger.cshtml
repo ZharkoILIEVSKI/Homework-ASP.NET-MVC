@@ -1,0 +1,24 @@
+﻿@using BurgerApp.Controllers
+@using BurgerApp.ViewModels
+@using BurgerApp.Domain
+@model BurgerOrderViewModel
+
+<h2>Add Burger</h2>
+
+<form asp-action="AddBurger" method="post">
+
+    <input type="hidden" asp-for="OrderId"/>
+
+    <div class=" form-group">
+        <label asp-for="burger" class=" custom-control-label"></label>
+        <select class="form-control" asp-for="burger" asp-items="@(new SelectList.ViewBag.Burgers(), "Id", "Name")"></select>
+    </div>
+
+    <div class=" form-group">
+        <label asp-for="burger" class=" custom-control-label"></label>
+        <select class="form-control" asp-for="burger" asp-items="Html.GetEnumSelectList<List<BurgerNames>>()"></select>
+    </div>
+
+    <button class="btn btn-outline-success">Add Burger</button>
+
+</form>

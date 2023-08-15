@@ -8,10 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BurgerApp.Domain\BurgerApp.Domain.csproj" />
+    <ProjectReference Include="..\BurgerApp.Services\BurgerApp.Services.csproj" />
   </ItemGroup>
 
 </Project>
