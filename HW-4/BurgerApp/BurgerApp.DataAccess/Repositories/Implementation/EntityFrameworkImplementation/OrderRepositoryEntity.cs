@@ -33,9 +33,9 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplem
         {
             return _burgerAppDbContext
                    .Orders
-                   .Include(x => x.BurgerOrders)
-                   .ThenInclude(x => x.Burger)
-                   .Include(x => x.User)
+                   .Include(x => x.Burgers)
+                   .ThenInclude(x => x.Price)
+                   .Include(x => x.Address)
                    .ToList();
         }
 
@@ -43,9 +43,9 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplem
         {
             return _burgerAppDbContext
                     .Orders
-                    .Include(x => x.BurgerOrders)
-                    .ThenInclude(x => x.Burger)
-                    .Include(x => x.User)
+                    .Include(x => x.Burgers)
+                    .ThenInclude(x => x.Price)
+                    .Include(x => x.FullName)
                     .FirstOrDefault(x => x.Id == id)!;
         }
 
@@ -55,10 +55,10 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplem
             return _burgerAppDbContext.SaveChanges();   
         }
 
-        public int Update(Order entity)
+        public void Update(Order entity)
         {
             _burgerAppDbContext.Orders.Update(entity);
-            return _burgerAppDbContext.SaveChanges();   
+            _burgerAppDbContext.SaveChanges();   
         }
     }
 }

@@ -27,8 +27,8 @@ namespace BurgerApp.Mappers.Extensions
             {
                 Id = order.Id,
                 FullName = order.FullName,
-                Location = order.OrderLocation,
-                BurgerNames = order.BurgerOrders.Select(x => x.Burger.Name).ToList(),
+                Location = order.Location,
+                BurgerNames = order.Burgers.Select(x => x.Name).ToList(),
             };
         }
 
@@ -39,8 +39,8 @@ namespace BurgerApp.Mappers.Extensions
                 Id = orderViewModel.Id,
                 FullName = orderViewModel.FullName,
                 IsDelivered = orderViewModel.IsDelivered,
-                OrderLocation = orderViewModel.Location,
-                BurgerOrders = new List<BurgerOrder>(),
+                Location = orderViewModel.Location,
+                Burgers = new List<Burger>(),
             };
         }
 
@@ -50,8 +50,8 @@ namespace BurgerApp.Mappers.Extensions
             {
                 Id = order.Id,
                 Delivered = order.IsDelivered,
-                UserFullName = $"{order.FullName.FullName}",
-                BurgerNames = order.BurgerOrders.Select(po => po.Burger.Name).ToList()
+                UserFullName = $"{order.FullName}",
+                BurgerNames = order.Burgers.Select(x => x.Name).ToList()
             };
         }
 }

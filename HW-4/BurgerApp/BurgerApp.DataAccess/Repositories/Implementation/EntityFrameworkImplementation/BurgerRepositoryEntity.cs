@@ -56,7 +56,7 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplem
             _burgerAppDbContext.SaveChanges();
         }
 
-        int IRepository<Burger>.Update(Burger entity)
+        void IRepository<Burger>.Update(Burger entity)
         {
             throw new NotImplementedException();
         }

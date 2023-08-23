@@ -62,53 +62,59 @@ namespace BurgerApp.DataAccess.Data
                     FullName = "Bojan Bojanovski",
                     Address = "Praska 22",
                     IsDelivered = false,
-                    BurgerOrders = new List<BurgerOrder>
+                    Burgers = new List<Burger>
                     {
-                        new BurgerOrder
+                        new Burger
                         {
-                            Burger = Burgers[0],
-                            BurgerId = Burgers[0].Id,
-                            OrderId = Orders[0].Id,
+                            Id = 1,
+                            Name = "Chickenburger",
+                            Price = 210,
+                            IsVegetarian = false,
+                            IsVegan = false,
+                            HasFries = true,
                         },
                     },
-                    OrderLocation = "BurgerStore N'1",
+                    Location = "BurgerStore N'1",
                 },
                 new Order
                 {
-                    Id=2,
+                    Id = 2,
                     FullName = "Svetle Svetlanosvka",
                     Address = "Alzirska 33",
                     IsDelivered = false,
-                    BurgerOrders= new List<BurgerOrder>
+                    Burgers= new List<Burger>
                     {
-                        new BurgerOrder
+                        new Burger
                         {
-                            Burger = Burgers[1],
-                            BurgerId = Burgers[1].Id,
-                            OrderId = Orders[1].Id
+                            Id = 2,
+                            Name = "Hamburger",
+                            Price = 240,
+                            IsVegetarian = false,
+                            IsVegan = false,
+                            HasFries = true,
                         },
                     },
-                     OrderLocation = "BurgerStore N'2",
+                     Location = "BurgerStore N'2",
                 },
             };
 
-            Users = new List<User>
-            {
-                new User
-                {
-                    Id = 1,
-                    FullName = "Bojan Bojanovski",
-                    Address = "Praska 22",
-                    Orders = new List<Order> {}
-                },
-                new User
-                {
-                    Id = 2,
-                    FullName = "Svetle Svetlanovska",
-                    Address = "Alzirska 33",
-                    Orders = new List<Order> {}
-                }
-            };
+            //Users = new List<User>
+            //{
+            //    new User
+            //    {
+            //        Id = 1,
+            //        FullName = "Bojan Bojanovski",
+            //        Address = "Praska 22",
+            //        Orders = new List<Order> {}
+            //    },
+            //    new User
+            //    {
+            //        Id = 2,
+            //        FullName = "Svetle Svetlanovska",
+            //        Address = "Alzirska 33",
+            //        Orders = new List<Order> {}
+            //    }
+            //};
 
         }
 

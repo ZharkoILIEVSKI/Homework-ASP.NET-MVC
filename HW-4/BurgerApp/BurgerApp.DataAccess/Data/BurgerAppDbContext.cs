@@ -15,7 +15,7 @@ namespace BurgerApp.DataAccess.Data
 
         public DbSet<Order> Orders{ get; set; }
 
-        public DbSet<User> Users { get; set; }
+        // public DbSet<User> Users { get; set; }
 
         public DbSet<Burger> Burgers { get; set; }
 
@@ -30,19 +30,20 @@ namespace BurgerApp.DataAccess.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Order>()
-                .HasMany(x => x.BurgerOrders)
-                .WithOne(x => x.Order)
-                .HasForeignKey(x => x.BurgerId);
+                .HasMany(x => x.Burgers)
+                //.WithOne(x => x.Name)
+                ;
+                
 
-            modelBuilder.Entity<User>()
-                .HasMany(x => x.Orders)
-                .WithOne(x => x.User)
-                .HasForeignKey(x => x.Id);
+            //modelBuilder.Entity<User>()
+            //    .HasMany(x => x.Orders)
+            //    .WithOne(x => x.User)
+            //    .HasForeignKey(x => x.Id);
 
             modelBuilder.Entity<Burger>()
-                .HasMany(x => x.BurgerOrders)
-                .WithOne(x => x.Burger)
-                .HasForeignKey(x => x.BurgerId);
+                .HasOne(x => x.Name);
+                //.(x => x.)
+                //.HasForeignKey(x => x.);
 
             modelBuilder.Entity<Burger>()
                     .HasData(
@@ -85,7 +86,7 @@ namespace BurgerApp.DataAccess.Data
                                 FullName = "Bojan Bojanovski",
                                 Address = "Praska 22",
                                 IsDelivered = false,
-                                OrderLocation = "BurgerStore N'1",
+                                Location = "BurgerStore N'1",
                             },
                             new Order
                             {
@@ -93,7 +94,7 @@ namespace BurgerApp.DataAccess.Data
                                 FullName = "Svetle Svetlanosvka",
                                 Address = "Alzirska 33",
                                 IsDelivered = false,
-                                OrderLocation = "BurgerStore N'2",
+                                Location = "BurgerStore N'2",
                             }
                 );
         }

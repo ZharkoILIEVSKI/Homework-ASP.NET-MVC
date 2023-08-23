@@ -34,7 +34,7 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementatio
             return entity.Id;
         }
 
-        public int Update(Order entity)
+        public void Update(Order entity)
         {
             Order order = StaticDb.Orders.FirstOrDefault(order => order.Id == entity.Id);
             int index = StaticDb.Orders.IndexOf(order);

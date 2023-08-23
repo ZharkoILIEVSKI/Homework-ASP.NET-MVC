@@ -33,7 +33,7 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementatio
             {
                 throw new Exception($"Burger with id {id} was not found.");
             }
-            StaticDb.Burgers.Remove(burger);
+            return (burger);
         }
 
         public int Insert(Burger entity)
@@ -43,7 +43,7 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementatio
             return entity.Id;
         }
 
-        public int Update(Burger entity)
+        public void Update(Burger entity)
         {
             Burger burger = StaticDb.Burgers.FirstOrDefault(x => x.Id == entity.Id);
             if (burger == null)
@@ -52,6 +52,11 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementatio
             }
             int index = StaticDb.Burgers.IndexOf(entity);
             StaticDb.Burgers[index] = entity;
+        }
+
+        void IRepository<Burger>.Update(Burger entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

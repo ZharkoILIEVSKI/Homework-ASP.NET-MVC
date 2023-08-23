@@ -15,7 +15,7 @@ namespace BurgerApp.DataAccess.Repositories.Abstraction
 
         int Insert(T entity);
         
-        int Update(T entity);
+        void Update(T entity);
 
         void DeleteById(int id);
     }
